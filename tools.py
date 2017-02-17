@@ -33,7 +33,6 @@ def single_linkage(D, k=2):
         minimum = D.min()
 
         indexList = np.argwhere(minimum == D)
-        #print(indexList)
         # index in the cluster array of the element that is closest to the one found
         ind = indexList[0][1]
         # Move all elements that have that index to the same cluster
@@ -47,8 +46,5 @@ def single_linkage(D, k=2):
             D[ind][j] = 2.
             D[j][ind] = 2.
         k2 = len(set(cluster))
-        #print("unir ", indexList[0][0], " con ", copy)
-        #print(np.round(D,decimals=2))
-        #print(cluster)
 
     return cluster
