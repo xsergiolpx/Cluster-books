@@ -1,11 +1,9 @@
-# import glob
 import tools
 import numpy as np
 import sys
 
 
 # Load books
-#bookFiles = glob.glob("./books/*.txt")
 bookFiles = [x for x in sys.argv[1:]]
 
 # Count words
